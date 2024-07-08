@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\WebSystem\\EcommerceApi\\EcommerceAPI.csproj": {}
+    "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj": {}
   },
   "projects": {
-    "C:\\WebSystem\\EcommerceApi\\EcommerceAPI.csproj": {
+    "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WebSystem\\EcommerceApi\\EcommerceAPI.csproj",
+        "projectUniqueName": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj",
         "projectName": "EcommerceAPI",
-        "projectPath": "C:\\WebSystem\\EcommerceApi\\EcommerceAPI.csproj",
-        "packagesPath": "C:\\Users\\aspire_one\\.nuget\\packages\\",
-        "outputPath": "C:\\WebSystem\\EcommerceApi\\obj\\",
+        "projectPath": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj",
+        "packagesPath": "C:\\Users\\leonardo.ramos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aspire_one\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\leonardo.ramos\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -44,6 +44,14 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
