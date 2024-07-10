@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EcommerceAPI.Controllers
 {
-    [Route("clientes")]
+    [Route("clients")]
     [ApiController]
     public class ClientsController : ControllerBase
     {
@@ -75,16 +75,16 @@ namespace EcommerceAPI.Controllers
                 return NotFound("Cliente not found");
             }
 
-            client.name         = !string.IsNullOrEmpty(client_to_update.name)       ? client_to_update.name : client.name       ; 
-            client.phone        = !string.IsNullOrEmpty(client_to_update.phone)      ? client_to_update.name : client.phone      ;
-            client.password     = !string.IsNullOrEmpty(client_to_update.password)   ? client_to_update.name : client.password   ;
-            client.street       = !string.IsNullOrEmpty(client_to_update.street)     ? client_to_update.name : client.street     ;
-            client.number       = !string.IsNullOrEmpty(client_to_update.number)     ? client_to_update.name : client.number     ;
-            client.complement   = !string.IsNullOrEmpty(client_to_update.complement) ? client_to_update.name : client.complement ;
-            client.city         = !string.IsNullOrEmpty(client_to_update.city)       ? client_to_update.name : client.city       ;
-            client.state        = !string.IsNullOrEmpty(client_to_update.state)      ? client_to_update.name : client.state      ;
-            client.postal_code  = !string.IsNullOrEmpty(client_to_update.postal_code)? client_to_update.name : client.postal_code;
-            client.country      = !string.IsNullOrEmpty(client_to_update.country)    ? client_to_update.name : client.country    ;
+            client.name         = !string.IsNullOrEmpty(client_to_update.name)       ? client_to_update.name        : client.name       ; 
+            client.phone        = !string.IsNullOrEmpty(client_to_update.phone)      ? client_to_update.phone       : client.phone      ;
+            client.password     = !string.IsNullOrEmpty(client_to_update.password)   ? client_to_update.password    : client.password   ;
+            client.street       = !string.IsNullOrEmpty(client_to_update.street)     ? client_to_update.street      : client.street     ;
+            client.number       = !string.IsNullOrEmpty(client_to_update.number)     ? client_to_update.number      : client.number     ;
+            client.complement   = !string.IsNullOrEmpty(client_to_update.complement) ? client_to_update.complement  : client.complement ;
+            client.city         = !string.IsNullOrEmpty(client_to_update.city)       ? client_to_update.city        : client.city       ;
+            client.state        = !string.IsNullOrEmpty(client_to_update.state)      ? client_to_update.state       : client.state      ;
+            client.postal_code  = !string.IsNullOrEmpty(client_to_update.postal_code)? client_to_update.postal_code : client.postal_code;
+            client.country      = !string.IsNullOrEmpty(client_to_update.country)    ? client_to_update.country     : client.country    ;
 
             await _dbContext.SaveChangesAsync();
 
@@ -92,17 +92,17 @@ namespace EcommerceAPI.Controllers
 
         }
 
-        [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(int id)
-        {
-            var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.id == id);
+        //[HttpDelete("{id}")]
+        // public async Task<ActionResult> Delete(int id)
+        // {
+        //     var client = await _dbContext.Clients.FirstOrDefaultAsync(c => c.id == id);
 
-            if(client == null){
-                return NotFound("Client not Found.");
-            }
+        //     if(client == null){
+        //         return NotFound("Client not Found.");
+        //     }
 
 
-        }
+        // }
 
 
 

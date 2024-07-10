@@ -1,15 +1,14 @@
 using EcommerceAPI.Data;
-using EcommerceAPI.Controllers;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("PostgresConnection");
-  builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+var builder = WebApplication.CreateBuilder(args);  //Criação do BUILD da aplicação
+builder.Services.AddDbContext<AppDbContext>(options => 
+  options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 builder.Services.AddControllers();
 
-var app = builder.Build();
+var app = builder.Build(); // Construção do projeto
 
 app.MapControllers();
 
-app.Run();
+app.Run();  // execução e inicalizção do projeto
