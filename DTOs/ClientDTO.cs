@@ -16,7 +16,7 @@ namespace EcommerceAPI.DTOs
         public required string number { get; set; }
         public required string? complement { get; set; }
         public required string city { get; set; }
-        public required string state { get; set; }
+        public required string state { get ; set ; }
         public required string postal_code { get; set; }
         public required string country { get; set; }
     }

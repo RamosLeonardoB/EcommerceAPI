@@ -1165,19 +1165,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leonardo.ramos\\.nuget\\packages\\": {}
+    "C:\\Users\\aspire_one\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj",
+      "projectUniqueName": "C:\\WebSystem\\EcommerceAPI\\EcommerceAPI.csproj",
       "projectName": "EcommerceAPI",
-      "projectPath": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\EcommerceAPI.csproj",
-      "packagesPath": "C:\\Users\\leonardo.ramos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leonardo.ramos\\C_Sharp\\EcommerceAPI\\obj\\",
+      "projectPath": "C:\\WebSystem\\EcommerceAPI\\EcommerceAPI.csproj",
+      "packagesPath": "C:\\Users\\aspire_one\\.nuget\\packages\\",
+      "outputPath": "C:\\WebSystem\\EcommerceAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leonardo.ramos\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\aspire_one\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
