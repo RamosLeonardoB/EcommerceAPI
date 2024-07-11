@@ -38,6 +38,25 @@ namespace EcommerceAPI.Controllers
 
         }
 
+        [HttpGet("{name}")]
+        public async Task<ActionResult<IEnumerable<Seller>>> GetByName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return BadRequest("Nome inválido.");
+            }
+
+            var sellers = await _dbContext.Sellers.Where(s => s.name.ToLower().Contains(name.ToLower())).ToListAsync();
+
+            if (sellers.Count == 0)
+            {
+                return NotFound("Vendedores não encontrados.");
+            }
+
+            return Ok(sellers);
+        }
+
+
         [HttpPost]
         [Consumes("application/json")]
         public async Task<ActionResult<Seller>> Create([FromBody] CreateSellerDTO seller_to_create)
