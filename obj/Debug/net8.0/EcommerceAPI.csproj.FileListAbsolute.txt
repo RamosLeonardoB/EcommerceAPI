@@ -37,3 +37,4 @@ C:\Users\leonardo.ramos\C_Sharp\EcommerceAPI\obj\Debug\net8.0\EcommerceAPI.pdb
 C:\Users\leonardo.ramos\C_Sharp\EcommerceAPI\obj\Debug\net8.0\EcommerceAPI.genruntimeconfig.cache
 C:\Users\leonardo.ramos\C_Sharp\EcommerceAPI\obj\Debug\net8.0\ref\EcommerceAPI.dll
 C:\Users\leonardo.ramos\C_Sharp\EcommerceAPI\obj\Debug\net8.0\EcommerceAPI.sourcelink.json
+C:\Users\leonardo.ramos\C_Sharp\EcommerceAPI\bin\Debug\net8.0\Insomnia_Exp\Insomnia_2024-07-10.json
