@@ -38,7 +38,7 @@ namespace EcommerceAPI.Controllers
 
         }
 
-        [HttpGet("{name}")]
+        [HttpPost("{name}")]
         public async Task<ActionResult<IEnumerable<Seller>>> GetByName(string name)
         {
             if (string.IsNullOrEmpty(name))
