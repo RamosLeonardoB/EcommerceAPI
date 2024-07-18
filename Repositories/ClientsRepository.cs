@@ -18,8 +18,8 @@ namespace EcommerceAPI.Repositories
         public async Task<IEnumerable<Client>> GetAll()
         {
             
-            var clients = await _dbContext.Clients.ToListAsync();
-            return Ok(clients);
+            return await _dbContext.Clients.ToListAsync();
+            //return Ok(clients);
 
         }
     }
