@@ -5,7 +5,10 @@ var builder = WebApplication.CreateBuilder(args);  //Criação do BUILD da aplic
 builder.Services.AddDbContext<AppDbContext>(options => 
   options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
+//builder.Services.AddScoped(typeof)
+
 builder.Services.AddControllers();
+
 
 var app = builder.Build(); // Construção do projeto
 
