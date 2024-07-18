@@ -3,6 +3,7 @@ using EcommerceAPI.Data;
 using EcommerceAPI.Models;
 using EcommerceAPI.DTOs;
 using Microsoft.EntityFrameworkCore;
+using EcommerceAPI.Repositories;
 
 namespace EcommerceAPI.Controllers
 {
@@ -11,19 +12,24 @@ namespace EcommerceAPI.Controllers
     [ApiController]
     public class SellersController : ControllerBase
     {
-        private readonly AppDbContext _dbContext;
-        public SellersController(AppDbContext dbContext)
+        //private readonly AppDbContext _dbContext; // troca pela linha abaixo
+
+        private readonly SellersRepository _repository;
+
+        public SellersController(SellersRepository repository)
         {
-            _dbContext = dbContext;
+            _repository = repository;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Seller>>> GetAll()
         {
-            var sellers = await _dbContext.Sellers.ToListAsync();
+            var sellers = await _repository.GetAll();
             return Ok(sellers);
         }
 
+
+/*
         [HttpGet("{id}")]
         public async Task<ActionResult<Seller>> GetById(int id)
         {
@@ -46,7 +52,7 @@ namespace EcommerceAPI.Controllers
                 return BadRequest("Nome inválido.");
             }
 
-            var sellers = await _dbContext.Sellers.Where(s => s.name.ToLower().Contains(name.ToLower())).ToListAsync();
+            var sellers = await _dbContext.Sellers.Where(s => s.name.Contains(name)).ToListAsync();
 
             if (sellers.Count == 0)
             {
@@ -116,6 +122,7 @@ namespace EcommerceAPI.Controllers
             return Ok("Seller deleted.");
 
         }
+        */
 
     }
 
